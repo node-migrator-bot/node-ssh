@@ -8,10 +8,10 @@ var exports = module.exports = function (keys) {
         var rsaFile = process.env.HOME + '/.ssh/id_rsa';
         var dsaFile = process.env.HOME + '/.ssh/id_dsa';
         
-        if (path.existsSync(rsaFile)) {
+        if (fs.existsSync(rsaFile)) {
             keys.rsa = rsaFile;
         }
-        else if (path.existsSync(dsaFile)) {
+        else if (fs.existsSync(dsaFile)) {
             keys.dsa = dsaFile;
         }
     }
